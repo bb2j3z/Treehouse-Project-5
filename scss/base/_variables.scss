@@ -1,0 +1,35 @@
+// Color Variables
+$alabaster :#fafafa;
+$grey :#888888;
+$mercury :#e7e7e7;
+$mine-shaft :#3a3a3a;
+$tundora:#4a4a4a;
+$white:#ffffff;
+$tarawera: #093a58;
+$purple: #b162a0;
+$mustard: #d7da22;
+
+// Font Stacks
+$stack-sans-serif   : Helvetica, Arial, sans-serif;
+$stack-helvetica    : "Helvetica Neue", $stack-sans-serif;
+$stack-abolition    : "Abolition Regular", $stack-sans-serif;
+
+// Font Sizes
+$font-big-1: 2.7em;
+$font-big-2: 2.6em;
+$font-semi-big: 1.2em;
+$font-normal: 1.0em;
+$font-semi-small: 0.9em;
+
+
+// Media query breakpoints
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+//brk-narrow : '(min-width: 768px)';
+//brk-wide : '(min-width: 1024px)';
+
+
+// Asset paths
+$path-img           : "../img";
+$path-font          : "../fonts";

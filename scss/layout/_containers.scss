@@ -2,16 +2,29 @@
 
 
 .container {
-	padding-left: 1em;
-	padding-right: 1em;
+    @extend %padding-sides;
     margin: 0 auto;
+
+    @include tablet {
+       width: 80%;
+    }
+
+    @include desktop {
+       max-width: 1150px;
+    }
+
 }
 
 .banner {
-  text-align: center;
+  @extend %centered;
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 25px;
+
+    @include desktop {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
 }
 
 .main-header {
@@ -25,10 +38,14 @@
     margin-bottom: 40px;
     margin-left: 1em;
     margin-right: 1em;
+
+    @include tablet {
+      text-align : center;
+    }
 }
 
 .main-footer .container {
-    border-top: 1px solid #e7e7e7;
+    @extend %t-border;
     padding-top: 25px;
     padding-left: 0px;
     padding-right: 0px;
@@ -36,43 +53,108 @@
 
 .main-footer .main-nav {
     display: none;
+
+    @include tablet {
+      margin-top: 18px;
+      display: block;
+    }
 }
 
 .col {
   margin-top: 25px;
   margin-bottom: 25px;
   border: none;
+
+  @include tablet {
+      float: left;
+      width: 49%;
+  }
+
+  @include desktop {
+      width: 32%;
+  }
+
+  h3 {
+     @extend %centered;
+  }
+
 }
 
-.col h3 {
-    text-align: center;
-}
 
 .col p {
-    text-align: center;
+     @extend %centered;
+
+    @include tablet {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .col img {
    max-width: 715px;
    width: 100%;
    margin-bottom: 30px;
-   box-shadow: 5px 5px 2px #888888;
+   box-shadow: 5px 5px 2px $grey;
 }
 
 .portfolio {
-  background-color: #ffffff;
+  @extend %padding-sides;
+  background-color: $white;
   padding-bottom: 25px;
   padding-top: 50px;
-  padding-left: 1em;
-  padding-right: 1em; 
+
+    @include tablet {
+       width: 83%;
+       margin: 0 auto;
+    }
+
+    @include desktop {
+       padding-left: 30px;
+       padding-right: 30px;
+       max-width: 1190px;
+       margin: 0 auto;
+    }
+
 }
 
+   .portfoliogrid {
+
+       @include tablet {
+           width: 92%;
+           margin: 0 auto;
+           padding: 0;
+       }
+
+       @include desktop {
+           width: 100%;
+           margin: 0 auto;
+           padding: 0;
+       }
+
+   }
+
+
+
 .contact {
+   @extend %padding-sides;
    padding-top: 50px;
-   padding-left: 1em;
-   padding-right: 1em;
+   @include tablet {
+        width: 83%;
+        margin: 0 auto;
+    }
 }
 
 .contact p {
-    text-align: center;
+    @extend %centered;
+    @include tablet {
+        width: 65%;
+        margin: 15px auto;
+    }
+
+    @include desktop {
+       max-width: 450px;
+    }
+
 }
+
+

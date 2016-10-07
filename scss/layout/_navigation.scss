@@ -2,34 +2,38 @@
 /* ---- Navigation ---- */
 
 .name {
-	font-size: 1.7em;
+    @extend %centered;
+	font-size: $font-big-1;
 	margin-top: 12px;
 	margin-bottom: 12px;
-    text-align: center;
 
-    @media (min-width: 768px) {
-       font-size: 1.6em;
+    @include tablet {
+       font-size: $font-big-2;
        margin-top: 18px;
     }
 }
 
 .main-footer .name {
    float: left;
-   font-size: 1.2em;
+   font-size: $font-semi-big;
  }
 
-.main-footer .main-nav {
-    float: right;
+.main-footer {
 
-    @media (min-width: 768px) {
+    .main-nav, .footer-nav {
+        float: right;
+    }
+
+    @include tablet {
       margin-top: 18px;
       display: block;
     }
-}
 
+    @include desktop {
+      margin-left: 0;
+      margin-right: 0;
+    }
 
-.main-footer .footer-nav {
-    float: right;
 }
 
 nav {
@@ -41,24 +45,40 @@ nav {
 }
 
 .main-nav {
-    @media (min-width: 768px) {
+
+    @include tablet {
        text-align: center;
+       display: block;
        margin-top: 25px;
     }
+
+   @include desktop {
+       float: right;
+       margin-top: 5px;
+    }
+
 }
 
 .main-nav li {
-	text-align: center;
-	background: #fff;
+    @extend %centered;
+	background: $white;
 	margin-bottom: 5px;
 
-    @media (min-width: 768px) {
+    @include tablet {
         padding: 0;
         display: inline-block;
         background: none;
         margin-right: 15px;
         margin-left: 15px;
     }
+
+    @include desktop {
+        float: left;
+        display: inline-block;
+        margin-left: 40px;
+        padding: 15px 0;
+    }
+
 }
 
 
@@ -68,30 +88,30 @@ nav {
 
 .name a,
 .main-nav a {
-	text-align: center;
+	 @extend %centered;
 }
 
 .main-nav a {
-	font-size: 1.0em;
-	color: #4a4a4a;
+	font-size: $font-normal;
+	color: $tundora;
 	text-transform: uppercase;
     font-weight: 800;
     display: block;
     padding: 15px 0;
 
-    @media (min-width: 768px) {
-        font-size: 0.9em;
+    @include tablet {
+        font-size: $font-semi-small;
         padding: 0;
     }
 }
 
 .footer-nav a {
-	font-size: 1.0em;
-	color: #4a4a4a;
+	font-size: $font-normal;
+	color: $tundora;
 	text-transform: uppercase;
     font-weight: 800;
 }
 
 .main-nav a:hover, .footer-nav a:hover  {
-	color: #093a58;
+	color: $tarawera;
 }
